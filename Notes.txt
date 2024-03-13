@@ -98,9 +98,43 @@ npm run build
 // Configured routes in server/djangoproj/urls.py
 
 
+Module 03
+---------
+
+
 // Go to the folder: cd /home/project/xrwvm-fullstack_developer_capstone/server/database
 // Every time we change the app.js file, we have to make docker build the nodeapp
 docker build . -t nodeapp
 
 // To run the server, use this:
 docker-compose up
+
+
+// Run the following to set up the Django environment:
+cd /home/project/xrwvm-fullstack_developer_capstone/server
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+
+// Install the required packages by running the following command:
+python3 -m pip install -U -r requirements.txt 
+
+// Run the following command to perform model migrations:
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
+
+
+// Added models for CarMake and CarModel in server/djangoapp/models.py
+
+// Made migrations for the new tables
+python3 manage.py makemigrations
+python3 manage.py migrate --run-syncdb
+
+// Do the npm bits.
+cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
+npm install
+npm run build
+
+// run the server
+python3 manage.py runserver
