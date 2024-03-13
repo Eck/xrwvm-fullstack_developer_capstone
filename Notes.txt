@@ -188,3 +188,5 @@ sentiment_analyzer_url=https://sentianalyzer.1ei4pagyx6cq.us-south.codeengine.ap
 // Setup React component for Dealers Page and wired it up in App.js
 // Setup React component for Dealer and its reviews
 // Wired up Dealer Detail component that also shows a dealer's reviews
+
+// Wired up Add Review component
