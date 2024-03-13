@@ -1,0 +1,33 @@
+These notes contain all the file modifications and terminal commands used to deviate from the forked repo
+
+
+Module 01
+---------
+
+// Change to the server directory
+cd xrwvm-fullstack_developer_capstone/server
+
+// Setup virtual environment for Django to run
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+
+// Install the necessary Python packages in your virtual environment. The package names have already been provided in requirements.txt.
+python3 -m pip install -U -r requirements.txt
+
+
+// Added 'frontend/static/ to server/djangoproj/settings.py
+// Added  STATICFILES_DIRS to server/djangoproj/settings.py
+
+// Perform migrations
+python3 manage.py makemigrations
+
+// Run migrations
+python3 manage.py migrate
+
+// Start the local dev server
+python3 manage.py runserver
+
+
+// On the file editor, open the server/djangoproj/settings.py in the editor and set the ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS to reflect your Django app's root URL.
+Changed ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS
