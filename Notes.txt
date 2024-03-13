@@ -140,6 +140,51 @@ npm run build
 python3 manage.py runserver
 
 
+// Make sure the docker image is up for the nodeapp backend
+cd /home/project/xrwvm-fullstack_developer_capstone/server/database
+
+docker build . -t nodeapp
+
+docker-compose up
+
+// Set this url to the backend url
+https://eck31415-3030.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/
+
+
+// Setup the django server environment and run the server
+cd /home/project/xrwvm-fullstack_developer_capstone/server
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+
+python3 -m pip install -U -r requirements.txt
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py runserver
+
 // wrote a get_request method to interact with the backend.
+
+Start up Cloud/Code Engine
+Click [Create Project] button
+Click [Code Engine CLI}
+
 // Got the Sentiment analysys on Code Engine deployed and running
+cd xrwvm-fullstack_developer_capstone/server/djangoapp/microservices
+
+docker build . -t us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
+
+docker push us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer
+
+ibmcloud ce application create --name sentianalyzer --image us.icr.io/${SN_ICR_NAMESPACE}/senti_analyzer --registry-secret icr-secret --port 5000
+
+// In .env, set
+sentiment_analyzer_url=https://sentianalyzer.1ei4pagyx6cq.us-south.codeengine.appdomain.cloud/
+
 // Got the routes wired up through the app to the backend for the dealers, dealers by state, dealer details by id, and dealer reviews by dealer id.
+
+// Got the route for adding reviews setup.
+
+// Setup React component for Dealers Page and wired it up in App.js
+// Setup React component for Dealer and its reviews
+// Wired up Dealer Detail component that also shows a dealer's reviews
