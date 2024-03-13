@@ -96,3 +96,11 @@ npm run build
 // Configured routes in frontend/src/App.js
 // Reran npm run build
 // Configured routes in server/djangoproj/urls.py
+
+
+// Go to the folder: cd /home/project/xrwvm-fullstack_developer_capstone/server/database
+// Every time we change the app.js file, we have to make docker build the nodeapp
+docker build . -t nodeapp
+
+// To run the server, use this:
+docker-compose up
