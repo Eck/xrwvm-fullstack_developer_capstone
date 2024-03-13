@@ -83,3 +83,10 @@ npm run build
 
 // Uncommented some code in djangoapp/views.py
 // Wired up login in server/djangoapp/uerls.py and server/djangoproj/urls.py
+
+// Wired up logout in djangoapp/views.py and djangoapp/urls.py and server/frontend/static/Home.html
+
+// Open a new terminal and run the following command.
+cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
+npm run build
+
