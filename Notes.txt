@@ -31,3 +31,9 @@ python3 manage.py runserver
 
 // On the file editor, open the server/djangoproj/settings.py in the editor and set the ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS to reflect your Django app's root URL.
 Changed ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS
+
+
+// Modified server/frontend/static/About.html to include style sheet and content changes
+
+// Added url pattern to wire up the about page inside of djangoproj/urls.py
+path('about/', TemplateView.as_view(template_name="About.html")),
