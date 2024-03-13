@@ -37,3 +37,11 @@ Changed ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS
 
 // Added url pattern to wire up the about page inside of djangoproj/urls.py
 path('about/', TemplateView.as_view(template_name="About.html")),
+
+// Added Contact Us page and content
+
+// Added url pattern to wire up the new Contact page.
+path('contact/', TemplateView.as_view(template_name="Contact.html")),
+
+
+
