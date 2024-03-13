@@ -138,3 +138,8 @@ npm run build
 
 // run the server
 python3 manage.py runserver
+
+
+// wrote a get_request method to interact with the backend.
+// Got the Sentiment analysys on Code Engine deployed and running
+// Got the routes wired up through the app to the backend for the dealers, dealers by state, dealer details by id, and dealer reviews by dealer id.
