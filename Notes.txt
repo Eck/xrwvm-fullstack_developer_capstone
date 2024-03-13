@@ -90,3 +90,9 @@ npm run build
 cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
 npm run build
 
+// Added register view in djangoapp/views.py
+// Configured route in djangoapp/urls.py
+// Created Register.jsx
+// Configured routes in frontend/src/App.js
+// Reran npm run build
+// Configured routes in server/djangoproj/urls.py
