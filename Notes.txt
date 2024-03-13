@@ -45,3 +45,41 @@ path('contact/', TemplateView.as_view(template_name="Contact.html")),
 
 
 
+Module 02
+---------
+// Had to set the virtual environment back up. This wouldn't be necessary on my local machine
+cd /home/project/xrwvm-fullstack_developer_capstone/server
+
+pip install virtualenv
+virtualenv djangoenv
+source djangoenv/bin/activate
+
+python3 -m pip install -U -r requirements.txt
+
+python3 manage.py makemigrations
+
+python3 manage.py migrate
+
+// Create a superuser by running the following command.
+python3 manage.py createsuperuser
+
+superuser/superuser@nowhere.com/supass
+
+// Run the server again:
+python3 manage.py runserver
+
+// Open a New Terminal and switch to the client directory.
+cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
+
+// Install all required packages.
+npm install
+
+// Run the following command to build the client.
+npm run build
+
+// Open server/djangoproj/settings.py in the editor. Under TEMPLATES, 
+// added more to DIRS and STATICFILES_DIRS
+
+
+// Uncommented some code in djangoapp/views.py
+// Wired up login in server/djangoapp/uerls.py and server/djangoproj/urls.py
